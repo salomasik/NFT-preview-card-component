@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+@import "./variables.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", serif;
+}
+
+
+// reusable
+a{
+    text-decoration: none;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba($color: $Cyan, $alpha: .5);
+    border-radius: 10px;
+    background-image: url("/images/icon-view.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+}
+// reusable
+
+
+body{
+    margin: 50px auto;
+    background-color: $Very-dark-blue-main-BG;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+
+
+    .card{
+        box-shadow: none;
+        width: 350px;
+        height: 595px;
+        background-color: $Very-dark-blue-card-BG;
+        padding: 25px;
+        display: grid;
+        gap: 25px;
+        border-radius: 10px;
+
+
+        hr{
+            background-color: #2f415b;
+            border: .5px #2f415b;
+            height: .5px;
+        }
+
+        &__header{
+            position: relative;
+            width: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+
+            &__img-head{
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+
+            }
+            &:hover .overlay {
+                opacity: 1;
+              }
+            
+           
+        }
+
+
+
+        &__description{
+            display:grid;
+            gap: 25px;
+            h2{
+                font-weight: 600;
+                font-size: 22px;
+                color: $White;
+
+
+                
+
+
+
+                a{
+                    font-weight: 600;
+                font-size: 22px;
+                color: $White;
+                &:is(:hover,:focus){
+                    cursor: pointer;
+                    color: $Cyan;
+                }
+                }
+            }
+            
+
+            p{
+                font-size: 16px;
+                line-height: 20px;
+                color: $Very-dark-blue-line;
+            }
+            &__info{
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &__ETH{
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    color: $Cyan;
+                }
+
+                &__time-left{
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    color: $Soft-blue;
+                }
+            }
+        }
+
+
+
+
+
+        .card__creator{
+
+
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            .card__creator__img{
+                width: 30px;
+                height: 30px;
+                border: 1px solid $White;
+                border-radius: 25px;
+            }
+
+
+            .card__creator__whos{
+                font-size: 12px;
+                color: $Very-dark-blue-line;
+
+                &__name{
+                    a{
+                    font-size: 12px;
+                    color: $White;
+
+                    &:is(:hover,:focus){
+                        cursor: pointer;
+                        color: $Cyan;
+                    }
+                    }
+
+                }
+
+
+                // h2:hover{
+                //     cursor: pointer;
+                //     color: $Cyan;
+                // }
+            }
+        }
+    }
+}
+
+
+
+
+
