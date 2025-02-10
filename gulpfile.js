@@ -73,7 +73,7 @@ function watchTask() {
   watch('*.html', browserSyncReload);
   watch(
     ['app/scss/**/*.scss', 'app/**/*.js', 'app/**/*.html'],
-    series(scssTask, jsTask, html, browserSyncReload)
+    series(scssTask, jsTask, browserSyncReload)
   );
 }
 
